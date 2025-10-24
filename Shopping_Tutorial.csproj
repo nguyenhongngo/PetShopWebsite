@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>disable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	  <UserSecretsId>94b49b3d-6330-48c8-ac68-46a626862e51</UserSecretsId>
+  </PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="wwwroot\backend\images\**" />
+	  <Content Remove="wwwroot\backend\images\**" />
+	  <EmbeddedResource Remove="wwwroot\backend\images\**" />
+	  <None Remove="wwwroot\backend\images\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.10" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.10" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.8" />
+		<PackageReference Include="Microsoft.AspNetCore.SignalR.Common" Version="8.0.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.8" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.4" />
+		<PackageReference Include="RestSharp" Version="112.1.0" />
+		<PackageReference Include="System.Security.Claims" Version="4.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Areas\Admin\Data\" />
+		<Folder Include="Areas\Admin\Repository\Momo\" />
+		<Folder Include="Migrations\" />
+		<Folder Include="Views\Payment\" />
+		<Folder Include="wwwroot\media\logo\" />
+		<Folder Include="wwwroot\media\sliders\" />
+	</ItemGroup>
+
+</Project>
